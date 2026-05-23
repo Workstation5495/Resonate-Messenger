@@ -1,2 +1,2 @@
-# Resonate-Messenger
-Resonate Integrated Resonate Messenger
+# Resonate-Hub
+Resonate Integrated Resonate Hub Always On Touch
