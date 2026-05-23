@@ -2,27 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonate Hub | Always on Touch</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Resonate Hub</title>
 </head>
 <body>
-    <header>
-        <h1>Resonate Hub</h1>
-        <p>Always on Touch</p>
-    </header>
-    <main id="app">
-        <div class="card" id="auth-box">
-            <h2>Welcome!</h2>
-            <button id="login-btn">Login with Google</button>
+
+    <!-- Окно авторизации (видно только если не вошел) -->
+    <div id="auth-screen" class="fullscreen-flex">
+        <div class="auth-card">
+            <h1 class="brand-title">Resonate Hub</h1>
+            <p class="tagline">Always on Touch</p>
+            <button id="login-btn" class="primary-btn">Login with Google</button>
         </div>
-        <div id="content" style="display:none;">
-            <div class="card">
-                <textarea placeholder="What's happening?"></textarea>
-                <button>Post</button>
-            </div>
-            <div id="feed"></div>
+    </div>
+
+    <!-- Основной интерфейс (скрыт до авторизации) -->
+    <div id="app-screen" style="display: none;">
+        <!-- Верхняя панель -->
+        <header class="topbar">
+            <h2 class="brand-title">Resonate Hub</h2>
+        </header>
+
+        <div class="main-container">
+            <!-- Левая колонка: Профиль и Меню -->
+            <aside class="sidebar-left">
+                <div class="profile-card">
+                    <img id="user-avatar" src="" alt="Avatar" class="avatar-large">
+                    <h3 id="user-name"></h3>
+                    <p class="status"></p>
+                </div>
+                <nav class="side-menu">
+                    <button class="menu-item active">Feed</button>
+                    <button class="menu-item">Messages</button>
+                    <button class="menu-item">Friends</button>
+                    <button class="menu-item">Settings</button>
+                </nav>
+                <button id="logout-btn" class="secondary-btn">Logout</button>
+            </aside>
+
+            <!-- Центральная колонка: Лента -->
+            <main class="feed-container">
+                <!-- Форма создания поста -->
+                <div class="create-post-card">
+                    <textarea id="post-input" placeholder="What's resonating with you right now?"></textarea>
+                    <div class="post-actions">
+                        <button id="publish-btn" class="primary-btn">Publish</button>
+                    </div>
+                </div>
+                
+                <!-- Здесь будут появляться посты -->
+                <div id="posts-feed">
+                    <!-- Посты загружаются через JavaScript -->
+                </div>
+            </main>
+
+            <!-- Правая колонка: Виджеты -->
+            <aside class="sidebar-right">
+                <div class="widget-card">
+                    <h3>Daily Picks</h3>
+                    <p class="widget-desc">People around your area</p>
+                    <div class="pick-item">
+                        <div class="pick-avatar"></div>
+                        <div class="pick-info">
+                            <h4>John Doe</h4>
+                            <button class="small-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
-    </main>
+    </div>
+
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
