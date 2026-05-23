@@ -1,6 +1,6 @@
 // Этот файл будет перезаписан сервером GitHub при деплое
 export const firebaseConfig = {
-  apiKey: "WILL_BE_FILLED_BY_GITHUB",
+  apiKey: "AIzaSyDLKq6i6ZddbYAmlcazoFjMl05f8ZL8dUc",
   authDomain: "resonatemessenger.firebaseapp.com",
   projectId: "resonatemessenger",
   storageBucket: "resonatemessenger.firebasestorage.app",
