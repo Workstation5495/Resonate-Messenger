@@ -1,29 +1,3 @@
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [ main ]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Create config file
-        # Мы создаем файл прямо перед тем, как GitHub выложит сайт в сеть
+- name: Create config file
         run: |
-          cat <<EOF > js/firebase-config.js
-          export const firebaseConfig = {
-            apiKey: "${{ secrets.FIREBASE_API_KEY }}",
-            authDomain: "resonatemessenger.firebaseapp.com",
-            projectId: "resonatemessenger",
-            storageBucket: "resonatemessenger.firebasestorage.app",
-            messagingSenderId: "669195536581",
-            appId: "1:885733250674:web:8f29438fefa9170b0948ac"
-          };
-          EOF
-          
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          echo "export const firebaseConfig = { apiKey: '${{ secrets.FIREBASE_API_KEY }}', authDomain: 'resonatemessenger.firebaseapp.com', projectId: 'resonatemessenger', storageBucket: 'resonatemessenger.firebasestorage.app', messagingSenderId: '669195536581', appId: '1:885733250674:web:8f29438fefa9170b0948ac' };" > js/firebase-config.js
