@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Resonate Hub</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Resonate Hub</title>
 </head>
 <body>
     <header>
         <h1>Resonate Hub</h1>
         <p>Always on Touch</p>
     </header>
-
     <main id="app">
-        <button id="loginBtn">Get Started</button>
+        <div class="card" id="auth-box">
+            <h2>Welcome!</h2>
+            <button id="login-btn">Login with Google</button>
+        </div>
+        <div id="content" style="display:none;">
+            <div class="card">
+                <textarea placeholder="What's happening?"></textarea>
+                <button>Post</button>
+            </div>
+            <div id="feed"></div>
+        </div>
     </main>
-
-    <!-- Важно: type="module" позволяет нам использовать import -->
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
