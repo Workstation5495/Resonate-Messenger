@@ -1,3 +1,0 @@
-- name: Create config file
-        run: |
-          echo "export const firebaseConfig = { apiKey: '${{ secrets.FIREBASE_API_KEY }}', authDomain: 'resonatemessenger.firebaseapp.com', projectId: 'resonatemessenger', storageBucket: 'resonatemessenger.firebasestorage.app', messagingSenderId: '669195536581', appId: '1:885733250674:web:8f29438fefa9170b0948ac' };" > js/firebase-config.js
