@@ -1,47 +1,6 @@
-:root {
-    --accent-yellow: #FFEA00; /* Очень яркий, "электрический" желтый */
-    --bg-dark: #121212;
-    --card-bg: #1e1e1e;
-}
-
-body {
-    background-color: var(--bg-dark);
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif; /* Можно подключить через Google Fonts */
-    margin: 0;
-}
-
-header {
-    padding: 20px;
-    background: linear-gradient(180deg, #2a2a2a 0%, #121212 100%);
-    border-bottom: 2px solid var(--accent-yellow);
-}
-
-h1 {
-    color: var(--accent-yellow);
-    font-size: 2.5rem;
-    letter-spacing: -1px;
-    margin: 0;
-}
-
-.tagline {
-    font-size: 0.9rem;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-button {
-    background-color: var(--accent-yellow);
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
+:root { --accent: #FFEA00; --bg: #121212; }
+body { background: var(--bg); color: white; font-family: sans-serif; margin: 0; padding: 20px; }
+header { border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-bottom: 20px; }
+h1 { color: var(--accent); margin: 0; }
+.card { background: #1e1e1e; padding: 15px; border-radius: 12px; margin-bottom: 10px; }
+button { background: var(--accent); border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; }
